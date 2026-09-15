@@ -133,7 +133,7 @@ namespace Tree {
                 dfs2(next);
                 dif[now] += dif[next];
                 edge[i] = dif[next];
-                edge[i ^ 1] = dif[next]; // 更新反向邊
+                edge[(i%2) ? (i+1) : (i-1)] = dif[next]; // 更新反向邊
             }
         }
     }
